@@ -1,0 +1,283 @@
+/* ==== New Mobile & Tablet Adaptive (overrides old rules) ==== */
+/* Phones (<= 767px) */
+@media (max-width: 767px) {
+
+  /* Extra safety: remove any outlines/frames in button areas on phones */
+  *, *::before, *::after { outline: none !important; }
+  [class*="btn"], [class*="button"], .btn, .button, .cta {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  /* Common "view contract" ids/classes hidden on phones */
+  #viewContract, .view-contract, [data-view-contract="true"] { display: none !important; }
+
+
+  /* Remove visible outlines / debug frames around buttons & groups */
+  [class*="btn-group"], [class*="buttons"], [class*="cta-row"], [class*="cta-wrap"], [class*="btn-grid"],
+  .buttons, .btns, .btn-group, .btn-grid, .controls, .cta-row, .cta-wrap {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  a:focus, button:focus, .btn:focus, .button:focus, .cta:focus, [role="button"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Hard-disable all animations/transitions on mobile */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Try to neutralize transforms that might freeze elements mid-keyframe */
+  [class*="animate"], [class*="anim"], [class*="parallax"], [class*="float"], [class*="bounce"], [class*="pulse"], [class*="shake"], [class*="wow"], .wow, .animated {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+
+  /* Hero/title should be static and fit */
+  h1, .hero-title, #title, .title, .shizo-title, .shizo__title {
+    font-size: clamp(28px, 8vw, 48px) !important;
+    line-height: 1.05 !important;
+    text-wrap: balance;
+    white-space: normal !important;
+  }
+
+  /* Main character/images: keep static, contained, not overlapping */
+  .hero, .hero-wrap, .hero__media, .character, .main-character, .mascot, .mascot-wrap, .handstand, .handstand-wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: min(520px, 95vw) !important;
+    margin: 16px auto 0 !important;
+    transform: none !important;
+  }
+  .hero img, .character img, .mascot img, img.character, img.mascot {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* Top-right social icons: always visible, not animated */
+  #topSocial, .top-social, .social, .socials, .social-icons {
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+    transform: none !important;
+  }
+  #topSocial a, .top-social a, .social a, .socials a, .social-icons a {
+    display: inline-flex !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  #topSocial img, .top-social img, .social img, .socials img, .social-icons img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    filter: none !important;
+  }
+
+  /* Contract address: smaller, placed below main content to avoid collision with socials */
+  #contract, #contractAddress, .contract-address, .contract, .token-address, .address.contract {
+    position: static !important;
+    display: block !important;
+    font-size: 12px !important;
+    word-break: break-all !important;
+    white-space: normal !important;
+    margin: 10px 12px 0 !important;
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+    background: rgba(0,0,0,0.2) !important;
+    max-width: calc(100vw - 24px) !important;
+  }
+
+  /* Buttons: no hover/escape movement; full width where needed */
+  .btn, button, .button, a.button, .cta {
+    position: relative !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: 100% !important;
+    will-change: auto !important;
+  }
+  .btn, .button, a.button, .cta {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+
+  /* Remove any fixed/absolute bg layers that fly around */
+  .bg, .background, .bg-layer, .parallax, [class*="bg-"], [class*="parallax"] {
+    background-attachment: scroll !important;
+    transform: none !important;
+  }
+  .bg-float, .bg-floating, .floaty, .flying {
+    display: none !important;
+  }
+
+  /* Layout containers */
+  .container, .wrap, .inner, .section, section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure slides/sections fill width and stack cleanly */
+  .slide, .hero, .section-hero, .first-screen, .screen {
+    min-height: auto !important;
+  }
+}
+
+/* Tablets (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Extra safety: remove any outlines/frames in button areas on tablets */
+  *, *::before, *::after { outline: none !important; }
+  [class*="btn"], [class*="button"], .btn, .button, .cta {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  #viewContract, .view-contract, [data-view-contract="true"] { display: none !important; }
+
+
+  /* Remove outlines/frames around buttons & groups on tablets */
+  [class*="btn-group"], [class*="buttons"], [class*="cta-row"], [class*="cta-wrap"], [class*="btn-grid"],
+  .buttons, .btns, .btn-group, .btn-grid, .controls, .cta-row, .cta-wrap {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  a:focus, button:focus, .btn:focus, .button:focus, .cta:focus, [role="button"]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  html, body { overflow-x: hidden !important; }
+
+  #topSocial, .top-social, .social, .socials, .social-icons {
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+    z-index: 9999 !important;
+    gap: 12px !important;
+  }
+  #topSocial a, .top-social a, .social a, .socials a, .social-icons a {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  #contract, #contractAddress, .contract-address, .contract, .token-address, .address.contract {
+    position: static !important;
+    display: block !important;
+    font-size: 13px !important;
+    margin: 12px 16px 0 !important;
+    padding: 10px 12px !important;
+    max-width: calc(100vw - 32px) !important;
+    background: rgba(0,0,0,0.2) !important;
+  }
+
+  h1, .hero-title, #title, .title, .shizo-title, .shizo__title {
+    font-size: clamp(36px, 6vw, 64px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .hero, .hero-wrap, .hero__media, .character, .main-character, .mascot, .mascot-wrap {
+    max-width: min(680px, 92vw) !important;
+    margin: 20px auto 0 !important;
+  }
+}
+
+
+/* ===== Custom fix: place contract address top-left on phones & tablets; center main character horizontally on page1 ===== */
+
+/* Tablets and phones (<= 1024px) */
+@media (max-width: 1024px) {
+  /* Contract address (only the code string) pinned to top-left on page 1 */
+  #page1 #contractAddress {
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    z-index: 10000 !important;
+  }
+
+  /* Main character on page 1: center horizontally, keep same vertical position */
+  #page1 .sprite {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+
+/* === FIX: Move full contract bar to top-left on PHONES only === */
+@media (max-width: 767px) {
+  #page1 .contract-bar {
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    right: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    z-index: 10000 !important;
+  }
+}
+
+
+/* === Phones & Tablets: hide the contract address string, keep only COPY + BUY === */
+@media (max-width: 1024px) {
+  #contractAddress, .contract-code, .contract-address {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  /* tighten up the bar when address is hidden */
+  #contractBar, .contract-bar {
+    gap: 8px !important;
+    padding: 8px 10px !important;
+  }
+}
+
+
+/* === Phones & Tablets: Whitepaper drawing area fills screen and supports touch === */
+@media (max-width: 1024px) {
+  .whitepaper .paper {
+    height: 70vh !important;
+    touch-action: none !important; /* prevent page scroll while drawing */
+  }
+  .whitepaper .paper-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    touch-action: none !important;
+  }
+}
+
+/* === Project-specific request: hide certain buttons on phones & tablets === */
+/* Phones & Tablets: up to 1024px */
+@media (max-width: 1024px) {
+  /* Hide ROADMAD on first slide */
+  #page1 #roadmad1 { display: none !important; }
+
+  /* Hide REVERSE SCROLL and REVERSE MOUSE on second slide */
+  #page2 #btnReverse,
+  #page2 #btnReverseMouse { display: none !important; }
+}
